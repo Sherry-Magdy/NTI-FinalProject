@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #f7fafc;
+}
+
+header.profile-header {
+    height: 0vh;
+}
+
+.banner {
+    height: 28vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: linear-gradient(to right, rgba(17, 50, 93, 0.85), rgba(27, 79, 147, 0.70)), url(./images/fix-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    padding: 35px 8%;
+}
+
+.banner h2 {
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+
+.banner p {
+    font-size: 15px;
+    color: #edf2f7;
+}
+
+.breadcrumb {
+    padding: 15px 8%;
+    color: #777;
+    font-size: 13px;
+}
+
+.breadcrumb a {
+    color: #777;
+    text-decoration: none;
+}
+
+.breadcrumb span {
+    color: rgb(17, 50, 93);
+    font-weight: bold;
+}
+
+.profile-container {
+    width: 84%;
+    margin: 10px auto 50px auto;
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* Side Card */
+.doc-sidebar {
+    width: 32%;
+    background: white;
+    border: 1px solid #e5e9f0;
+    border-radius: 14px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.doc-avatar {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px auto;
+}
+
+.doc-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #e2ecf7;
+}
+
+.doc-sidebar h2 {
+    color: rgb(17, 50, 93);
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.doc-sidebar .spec-badge {
+    display: inline-block;
+    background: #e2ecf7;
+    color: rgb(17, 50, 93);
+    font-size: 13px;
+    font-weight: bold;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.quick-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+    border-top: 1px solid #edf2f7;
+    padding-top: 20px;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    color: #555;
+}
+
+.stat-item i {
+    color: rgb(17, 50, 93);
+    font-size: 16px;
+    width: 20px;
+}
+
+.book-btn {
+    width: 100%;
+    margin-top: 25px;
+    background-color: rgb(17, 50, 93);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.book-btn:hover {
+    background-color: #0d284a;
+    transform: translateY(-2px);
+}
+
+/* Content Area */
+.doc-details {
+    width: 68%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.info-card {
+    background: white;
+    border: 1px solid #e5e9f0;
+    border-radius: 14px;
+    padding: 25px 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.info-card h3 {
+    color: rgb(17, 50, 93);
+    font-size: 18px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 2px solid #f0f4f8;
+    padding-bottom: 10px;
+}
+
+.info-card p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.skills-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.skills-list li {
+    font-size: 13px;
+    color: #4a5568;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.skills-list li i {
+    color: #38a169;
+}
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.day-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+}
+
+.day-box strong {
+    display: block;
+    color: rgb(17, 50, 93);
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.day-box span {
+    font-size: 12px;
+    color: #666;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .profile-container {
+        flex-direction: column;
+    }
+
+    .doc-sidebar,
+    .doc-details {
+        width: 100%;
+    }
+
+    .skills-list,
+    .schedule-grid {
+        grid-template-columns: 1fr;
+    }
+}

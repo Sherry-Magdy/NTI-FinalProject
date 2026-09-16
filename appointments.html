@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrightSmile - My Appointments</title>
+    <link rel="icon" href="./images/icon.png">
+    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="./query.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="appointments.css">
+</head>
+
+<body>
+    <header>
+    <nav>
+        <div class="logo">
+            <img src="./images/logo.png" alt="">
+            <!-- <i class="fa-solid fa-tooth"></i> -->
+            <div class="logo_content">
+                <h4>BrightSmile</h4>
+                <p>Dental Clinck</p>
+            </div>
+        </div>
+        <ul>
+            <li><a href="./home.html" onclick="check()">Home</a></li>
+            <li><a href="./dashboard.html">Dashboard</a></li>
+            <li><a href="./doctors.html">Doctors</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-xmark close"></i>
+        </ul>
+        <a href="./appointments.html">
+            <input type="button" value="Book Appointment" class="solid">
+        </a>
+        <div class="menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+    </header>
+
+    <div class="banner">
+        <h2>My Appointments</h2>
+        <p>View and manage your upcoming appointments.</p>
+    </div>
+
+    <p class="breadcrumb"><i class="fa-solid fa-house"></i> Home &gt; <span>My Appointments</span></p>
+    <div class="container">
+        <div class="sidebar">
+            <div class="user-img">
+                <img src="./images/Patient 1.jpg" alt="user">
+            </div>
+            <h3>Fatma Ahmed</h3>
+            <p><i class="fa-regular fa-envelope"></i> fatma@gmail.com</p>
+            <hr>
+            <ul class="side-links">
+                <li class="active"><i class="fa-regular fa-calendar-days"></i> My Appointments</li>
+                <li><i class="fa-regular fa-user"></i> Profile</li>
+                <li onclick="logout()"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</li>
+            </ul>
+        </div>
+        <div class="appointments-box">
+            <div class="header-box">
+                <h3><i class="fa-solid fa-calendar-check"></i> Upcoming Appointments</h3>
+                <button onclick="window.location.href='doctors.html'">
+                    <i class="fa-solid fa-plus"></i> Book New Appointment
+                </button>
+            </div>
+            <div class="item">
+                <div class="item-left">
+                    <img src="./images/dr-mona.png" alt="doc">
+                    <div>
+                        <h4>Dr. Sara Ahmed</h4>
+                        <p class="role"><i class="fa-solid fa-stethoscope"></i> General Dentist</p>
+                        <p class="date"><i class="fa-regular fa-clock"></i> Wed, 19 Sep 2026 - 10:00 AM</p>
+                    </div>
+                </div>
+                <div class="item-right">
+                    <span class="status confirmed"><i class="fa-solid fa-check"></i> Confirmed</span>
+                    <button class="cancel-btn" onclick="cancel(this)">
+                        <i class="fa-regular fa-trash-can"></i> Cancel
+                    </button>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-left">
+                    <img src="./images/dr-ahmed.png" alt="doc">
+                    <div>
+                        <h4>Dr. Ahmed Hassan</h4>
+                        <p class="role"><i class="fa-solid fa-stethoscope"></i> Orthodontist</p>
+                        <p class="date"><i class="fa-regular fa-clock"></i> Sat, 20 Sep 2026 - 11:30 AM</p>
+                    </div>
+                </div>
+                <div class="item-right">
+                    <span class="status pending"><i class="fa-solid fa-hourglass-half"></i> Pending</span>
+                    <button class="cancel-btn" onclick="cancel(this)">
+                        <i class="fa-regular fa-trash-can"></i> Cancel
+                    </button>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-left">
+                    <img src="./images/DrSara.jpg" alt="doc">
+                    <div>
+                        <h4>Dr. Mona Ali</h4>
+                        <p class="role"><i class="fa-solid fa-stethoscope"></i> Cosmetic Dentist</p>
+                        <p class="date"><i class="fa-regular fa-clock"></i> Tue, 25 Sep 2026 - 06:00 PM</p>
+                    </div>
+                </div>
+                <div class="item-right">
+                    <span class="status confirmed"><i class="fa-solid fa-check"></i> Confirmed</span>
+                    <button class="cancel-btn" onclick="cancel(this)">
+                        <i class="fa-regular fa-trash-can"></i> Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer id="contact">
+        <div class="item">
+            <div class="line">
+                <img src="./images/logo.png" alt="logo">
+                <div class="logo_content">
+                    <h4>BrightSmile</h4>
+                    <p>Dental Clinck</p>
+                </div>
+            </div>
+            <p>Healthy teeth. Happier you.</p>
+        </div>
+        <div class="item item2">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="./home.html">Home</a></li>
+                <li><a href="./appointments.html">Dashboard</a></li>
+                <li><a href="./doctors.html">Doctors</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="item item3">
+            <h3>Contact Us</h3>
+            <div class="line">
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:+201012345678">
+                    +20 10 1234 5678
+                </a>
+            </div>
+            <div class="line">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:info@brightsmile.com">
+                    info@brightsmile.com
+                </a>
+            </div>
+            <div class="line">
+                <i class="fa-solid fa-location-dot"></i>
+                <a href="https://www.google.com/maps/search/?api=1&query=Tanta,Egypt" target="_blank">
+                    Tanta, Egypt
+                </a>
+            </div>
+        </div>
+        <div class="end">
+            <hr>
+            <p>© 2026 BrightSmile Dental Clinic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function cancel(btn) {
+            let answer = confirm("Do you want to cancel this appointment?");
+            if (answer == true) {
+                btn.parentElement.parentElement.remove();
+                // alert("Appointment Cancelled!");
+            }
+        }
+
+        function logout() {
+            let ask = confirm("Are you sure to logout?");
+            if (ask) {
+                // alert("Logged out successfully");
+                window.history.back();
+            }
+        }
+    </script>
+    <script src="home.js"></script>
+</body>
+
+</html>

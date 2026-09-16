@@ -1,0 +1,162 @@
+@media screen and (max-width: 576px) {
+
+    nav .logo {
+        width: 50%;
+    }
+
+    nav .logo {
+        width: 50%;
+    }
+
+    nav .menu {
+        display: flex;
+        cursor: pointer;
+    }
+
+    nav ul {
+        position: absolute;
+        flex-direction: column;
+        width: 50%;
+        background-color: whitesmoke;
+        height: 98vh;
+        right: -15px;
+        top: 0;
+        align-items: center;
+        border-radius: 10px;
+        border: 1px solid darkgray;
+        display: none;
+    }
+
+    nav .close {
+        display: flex;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        cursor: pointer;
+    }
+
+    nav input {
+        display: none;
+    }
+
+    header .content {
+        width: 95%;
+        top: 35%;
+        left: 5px;
+    }
+
+    header .content h1 {
+        font-size: 35px;
+    }
+
+    header .content .btns {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    header .content .btns input {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .sec1 .item {
+        width: 100%;
+    }
+
+    .sec2 .content .item {
+        width: 95%;
+        margin: auto;
+        margin-top: 10px;
+    }
+
+    .sec3 {
+        height: 570px;
+        position: relative;
+    }
+
+    .sec3 img {
+        position: absolute;
+        top: -10px;
+        right: -30px;
+        width: 100%;
+        /* right: -29px; */
+    }
+
+    .sec3 .text {
+        position: absolute;
+        top: 370px;
+        left: 10px;
+        background-color: rgb(17, 50, 93);
+        border-radius: 20px;
+    }
+
+    footer .item {
+        width: 95%;
+        margin: 10px auto;
+        border-bottom: 1px solid grey;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .item3 {
+        border-bottom: none;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+
+    header .content {
+        width: 95%;
+        left: 2%;
+    }
+
+    .sec1 .item {
+        width: 50%;
+    }
+
+    .sec2 .content .item {
+        width: 48%;
+        margin-top: 10px;
+    }
+
+    .sec3 img {
+        width: 50%;
+    }
+
+    .sec3 .text {
+        width: 50%;
+    }
+
+    footer .item {
+        width: 48%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid grey;
+    }
+
+    footer .item2 {
+        border-left: 1px solid grey;
+    }
+
+    footer .item3 {
+        border-bottom: none;
+        padding-top: 10px;
+    }
+
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    .sec1 .item {
+        width: 33.3%;
+    }
+
+    header .content {
+        width: 90%;
+        left: 5%;
+    }
+}

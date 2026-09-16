@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrightSmile - Clinic Dashboard</title>
+    <link rel="icon" href="./images/icon.png">
+    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="./dash.css">
+    <link rel="stylesheet" href="./query.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar Header -->
+    <header class="dash-header">
+        <nav>
+            <div class="logo">
+                <img src="./images/logo.png" alt="BrightSmile">
+                <div class="logo_content">
+                    <h4>BrightSmile</h4>
+                    <p>Dental Clinic</p>
+                </div>
+            </div>
+            <ul>
+                <li><a href="./home.html">Home</a></li>
+                <li><a href="./dashboard.html">Dashboard</a></li>
+                <li><a href="./doctors.html">Doctors</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark close"></i>
+            </ul>
+            <a href="./appointments.html">
+                <input type="button" value="Book Appointment" class="solid">
+            </a>
+            <div class="menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Banner Section -->
+    <div class="banner">
+        <h2>Dashboard</h2>
+        <p>Manage appointments, patients, and doctors performance.</p>
+    </div>
+
+    <!-- Breadcrumb -->
+    <p class="breadcrumb">
+        <i class="fa-solid fa-house"></i> <a href="./home.html">Home</a> &gt; <span>Dashboard</span>
+    </p>
+    <main class="dashboard-wrapper">
+        <aside class="sidebar-menu">
+            <div class="menu-list">
+                <a href="./dashboard.html" class="active">
+                    <i class="fa-solid fa-table-columns"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="./appointments.html">
+                    <i class="fa-regular fa-calendar-check"></i>
+                    <span>Appointments</span>
+                </a>
+                <a href="#patients">
+                    <i class="fa-solid fa-hospital-user"></i>
+                    <span>Patients</span>
+                </a>
+                <a href="./doctors.html">
+                    <i class="fa-solid fa-user-doctor"></i>
+                    <span>Doctors</span>
+                </a>
+                <a href="#reports">
+                    <i class="fa-regular fa-file-lines"></i>
+                    <span>Reports</span>
+                </a>
+                <a href="#settings">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings</span>
+                </a>
+            </div>
+            <a href="./home.html" class="logout-btn">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>Logout</span>
+            </a>
+        </aside>
+
+        <section id="dash">
+            <!-- 1. Stats Cards -->
+            <div class="stats-row">
+                <div class="stat-card blue">
+                    <div class="stat-text">
+                        <p>Total Appointments</p>
+                        <h3>35</h3>
+                    </div>
+                    <div class="stat-icon"><i class="fa-regular fa-calendar-minus"></i></div>
+                </div>
+
+                <div class="stat-card sky">
+                    <div class="stat-text">
+                        <p>Today's Appointments</p>
+                        <h3>8</h3>
+                    </div>
+                    <div class="stat-icon"><i class="fa-solid fa-calendar-week"></i></div>
+                </div>
+
+                <div class="stat-card orange">
+                    <div class="stat-text">
+                        <p>Pending</p>
+                        <h3>5</h3>
+                    </div>
+                    <div class="stat-icon"><i class="fa-solid fa-hourglass-half"></i></div>
+                </div>
+
+                <div class="stat-card green">
+                    <div class="stat-text">
+                        <p>Confirmed</p>
+                        <h3>28</h3>
+                    </div>
+                    <div class="stat-icon"><i class="fa-regular fa-circle-check"></i></div>
+                </div>
+            </div>
+
+            <div class="panel-box">
+                <div class="panel-head">
+                    <h3>Appointments by Doctor</h3>
+                </div>
+                <div class="doctor-performance">
+                    <div class="perf-item">
+                        <div class="doc-label">
+                            <strong>Dr. Sara Ahmed</strong>
+                            <span>General Dentist</span>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 75%;"></div>
+                        </div>
+                        <span class="count">12</span>
+                    </div>
+
+                    <div class="perf-item">
+                        <div class="doc-label">
+                            <strong>Dr. Ahmed Hassan</strong>
+                            <span>Orthodontist</span>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 90%;"></div>
+                        </div>
+                        <span class="count">16</span>
+                    </div>
+
+                    <div class="perf-item">
+                        <div class="doc-label">
+                            <strong>Dr. Mona Ali</strong>
+                            <span>Cosmetic Dentist</span>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 50%;"></div>
+                        </div>
+                        <span class="count">7</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-box">
+                <div class="panel-head">
+                    <h3>Recent Appointments</h3>
+                    <a href="./appointments.html" class="view-all">View All</a>
+                </div>
+                <div class="table-responsive">
+                    <table class="dash-table">
+                        <thead>
+                            <tr>
+                                <th>Patient Name</th>
+                                <th>Doctor</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Fatma Ahmed</td>
+                                <td>Dr. Sara Ahmed</td>
+                                <td>17 Sep 2026</td>
+                                <td>10:00 AM</td>
+                                <td><span class="status-pill confirmed">Confirmed</span></td>
+                            </tr>
+                            <tr>
+                                <td>Omar Khaled</td>
+                                <td>Dr. Ahmed Hassan</td>
+                                <td>18 Sep 2026</td>
+                                <td>11:30 AM</td>
+                                <td><span class="status-pill pending">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>Hala Mohamed</td>
+                                <td>Dr. Mona Ali</td>
+                                <td>20 Sep 2026</td>
+                                <td>09:00 AM</td>
+                                <td><span class="status-pill confirmed">Confirmed</span></td>
+                            </tr>
+                            <tr>
+                                <td>Youssef Ali</td>
+                                <td>Dr. Sara Ahmed</td>
+                                <td>21 Sep 2026</td>
+                                <td>04:00 PM</td>
+                                <td><span class="status-pill cancelled">Cancelled</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="item">
+            <div class="line">
+                <img src="./images/logo.png" alt="logo">
+                <div class="logo_content">
+                    <h4>BrightSmile</h4>
+                    <p>Dental Clinic</p>
+                </div>
+            </div>
+            <p>Healthy teeth. Happier you.</p>
+        </div>
+        <div class="item item2">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="./home.html">Home</a></li>
+                <li><a href="./appointments.html">Dashboard</a></li>
+                <li><a href="./doctors.html">Doctors</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="item item3">
+            <h3>Contact Us</h3>
+            <div class="line">
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:+201012345678">+20 10 1234 5678</a>
+            </div>
+            <div class="line">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:info@brightsmile.com">info@brightsmile.com</a>
+            </div>
+            <div class="line">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Tanta, Egypt</span>
+            </div>
+        </div>
+        <div class="end">
+            <hr>
+            <p>© 2026 BrightSmile Dental Clinic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./home.js"></script>
+</body>
+
+</html>
