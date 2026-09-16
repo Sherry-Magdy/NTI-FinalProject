@@ -223,7 +223,6 @@ header.profile-header {
     color: #666;
 }
 
-/* Responsive */
 @media (max-width: 900px) {
     .profile-container {
         flex-direction: column;

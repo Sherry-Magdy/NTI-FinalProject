@@ -24,7 +24,7 @@
             </div>
         </div>
         <ul>
-            <li><a href="./home.html" onclick="check()">Home</a></li>
+            <li><a href="./index.html" onclick="check()">Home</a></li>
             <li><a href="./dashboard.html">Dashboard</a></li>
             <li><a href="./doctors.html">Doctors</a></li>
             <li><a href="./services.html">Services</a></li>
@@ -133,7 +133,7 @@
         <div class="item item2">
             <h3>Quick Links</h3>
             <ul>
-                <li><a href="./home.html">Home</a></li>
+                <li><a href="./index.html">Home</a></li>
                 <li><a href="./appointments.html">Dashboard</a></li>
                 <li><a href="./doctors.html">Doctors</a></li>
                 <li><a href="./services.html">Services</a></li>
@@ -172,14 +172,14 @@
             let answer = confirm("Do you want to cancel this appointment?");
             if (answer == true) {
                 btn.parentElement.parentElement.remove();
-                // alert("Appointment Cancelled!");
+                alert("Appointment Cancelled!");
             }
         }
 
         function logout() {
             let ask = confirm("Are you sure to logout?");
             if (ask) {
-                // alert("Logged out successfully");
+                alert("Logged out successfully");
                 window.history.back();
             }
         }
